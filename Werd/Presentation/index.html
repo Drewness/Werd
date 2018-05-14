@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Werd</title>
+
+        <meta name="author" content="Drew Coleman">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/css/style.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script type="text/javascript">
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+		<style>
+		    button:hover {
+		        color: black;
+		        border-color: black;
+		        cursor: context-menu;
+		    }
+		    button {
+		        font-size: 18px;
+		        margin: 4px 2px;
+		        white-space: normal;
+		        text-align: center;
+		        vertical-align: middle;
+		        border-radius: 2px;
+		    }
+		    ul.process-list li {
+		        display: inline;
+		    }
+		</style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>				
+                    <h1>{WERD}</h1>
+					<p><strong>W</strong>ebsite <strong>e</strong>File-XML <strong>R</strong>edaction <strong>D</strong>ownloader</p>
+					<br>
+                    <p>CCH Submitted XML Files</p>
+                </section>
+                <section>
+                    <h1>False Failure</h1>
+                    <div class="team-member">
+                        <p>Brandon Martin</p>
+                        <p>The Skipper</p>
+                    </div>
+                    <div class="team-member">
+                        <p>Mel Rowlett</p>
+                        <p>Highest High-Fiver</p>
+                    </div>
+                    <div class="team-member">
+                        <p>Jared Bebb</p>
+                        <p>Calmer of Storms</p>
+                    </div>
+                    <div class="team-member">
+                        <p>Chris Olson</p>
+                        <p>Customer Whisperer</p>
+                    </div>
+                    <div class="team-member">
+                        <p>Jim Pickett</p>
+                        <p>Ace in the Hole</p>
+                    </div>
+                    <div class="team-member">
+                        <p>Drew Coleman</p>
+                        <p>The Closer</p>
+                    </div>
+                </section>
+				<section>
+					<script>			
+					    var supportTime = 0;
+					    function addTime() {
+						    supportTime += 35;
+						    return supportTime;
+					    }
+					    function addSupportTime() {
+						    document.getElementById("timeLabel").innerHTML = addTime();
+					    }			
+					    function timeCount() {
+						    setInterval(function () { addSupportTime(); }, 600);	
+					    }
+					    var XMLCharge = 0;
+					    function addDollars() {
+						    XMLCharge += 25;
+						    return "$" + XMLCharge;
+					    }
+					    function addDollarCharge(){
+						    document.getElementById("chargeLabel").innerHTML = addDollars();
+					    }	
+					    function dollarCount() {
+						    setInterval(function () { addDollarCharge(); }, 600);
+					    }
+					</script>
+					<h2>Old Process</h2>
+					<ul class="process-list">
+					    <li><button class="button">Customer Calls <br> Support</button></li>
+					    <li>&rarr;</li>
+					    <li><button class="button">Support downloads <br>XML file</button></li>
+					    <li>&rarr;</li>
+					    <li><button class="button">Support redacts <br>XML file</button></li>
+					    <li>&rarr;</li>
+					    <li><button class="button">Support sends <br>customer XML</button></li>
+					    <li>=</li>
+					    <li><button class="button" onclick="timeCount()">Support<br> Time</button></li>
+					    <li><span id="timeLabel">0</span></li>
+					</ul>
+					<br>
+					<br>
+					<h2>New Process</h2>
+					<ul class="process-list">
+					    <li><button class="button">Customer logs <br>into ELF Status</button></li>
+					    <li>&rarr;</li>
+					    <li><button class="button">Customer downloads<br> XML file</button></li>
+					    <li>=</li>
+					    <li><button class="button" onclick="dollarCount()">WK <br>Revenue</button></li>
+					    <li><span id="chargeLabel">0</span></li>
+					</ul>			
+                </section>
+				<section>
+					<h1>Solution</h1>
+					<img src="img\elf-status-site-editted.jpg" alt="Elf Status Site">
+                </section>
+                <section>
+                        <h1>Goal</h1>
+						<ul>
+							<li>Programmatic retrieval of XML data transmitted/eFiled with the IRS. </li>
+							<li>This should reside in the Electronic Filing Status System and a fee for retrieval generated in same fashion as electronic filing.</li>
+						</ul>
+                </section>
+                <section>
+                    <section>
+                        <h1>Example</h1>
+						<div>
+						    <p><a href = "http://localhost:8000/">eFile</a></p>
+                        </div>
+                    </section>
+                </section>
+                <section>	
+                    <h1>Questions..?</h1>
+					<h1 id="werd" onmouseover="changeWerd()" onmouseout="changeDrew()">{WERD}</h1>
+					<script>
+					    function changeWerd() {
+						    document.getElementById("werd").innerHTML = "{drew}";
+					    }
+					    function changeDrew() {
+						    document.getElementById("werd").innerHTML = "{werd}";
+					    }
+					</script>
+                </section>
+            </div>
+        </div>
+        <script type="text/javascript" src="lib/js/head.min.js"></script>
+        <script type="text/javascript" src="js/reveal.js"></script>
+        <script type="text/javascript">
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+        </script>
+        <script type="text/javascript" src="lib/js/jquery.js"></script>
+        <script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+    </body>
+</html>

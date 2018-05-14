@@ -1,0 +1,211 @@
+﻿<div>
+    <div id="filterLayout" class="accordion">
+        <div class="card">
+            <div id="filterHeading" class="card-header" data-toggle="collapse" data-target="#filterBody" aria-expanded="true" aria-controls="filterBody">
+                <span class="mb-0">Filter/Search</span>
+            </div>
+            <div id="filterBody" class="collapse show" aria-labelledby="filterHeading" data-parent="#filterLayout">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <form class="form-container">
+                                <div class="form-legend"><span>Filter</span></div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">Tax Year</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01" ng-model="filter.taxYear">
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect02">Return Type</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect02" ng-model="filter.product">
+                                                <option value="1040">1040</option>
+                                                <option value="1041">1041</option>
+                                                <option value="1065">1065</option>
+                                                <option value="1120">1120</option>
+                                                <option value="1120S">1120S</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect03">Status</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect03" ng-model="filter.statusId">
+                                                <option value="0">Accepted</option>
+                                                <option value="1">Rejected</option>
+                                                <option value="2">Ready to Release</option>
+                                                <option value="3">CCH Review</option>
+                                                <option value="4">Schema Validation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect04">Date From</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect04" ng-model="filter.dateFrom">
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect05">Date To</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect05" ng-model="filter.dateTo">
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect06">Office</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect06" ng-model="filter.office">
+                                                <option value="0">Wichita</option>
+                                                <option value="1">Chicago</option>
+                                                <option value="1">New York</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect07">Preparer</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect07" ng-model="filter.preparerId">
+                                                <option value="1">Jared Bebb</option>
+                                                <option value="2">Drew Coleman</option>
+                                                <option value="3">Brandon Martin</option>
+                                                <option value="4">Chris Olson</option>
+                                                <option value="5">Jim Pickett</option>
+                                                <option value="6">Mel Rowlett</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="exampleRadiosInline" id="exampleRadiosInline1" value="federal" ng-model="filter.entity" ng-checked="true" checked>
+                                            <label class="form-check-label" for="exampleRadiosInline1">Federal</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="exampleRadiosInline" id="exampleRadiosInline2" value="state" ng-model="filter.entity">
+                                            <label class="form-check-label" for="exampleRadiosInline2">State</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="exampleRadiosInline" id="exampleRadiosInline3" value="fbar" ng-model="filter.entity">
+                                            <label class="form-check-label" for="exampleRadiosInline3">FBAR</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"  ng-model="filter.extension">
+                                            <label class="form-check-label" for="defaultCheck1">Exclude return on extension</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2"  ng-model="filter.signature">
+                                            <label class="form-check-label" for="defaultCheck2">Show return with signature forms not received</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" ng-click="filterResults()">Filter</button>
+                                <button class="btn" ng-click="clearResults()">Clear</button>
+                            </form>
+                            <div id="filterResults">
+                                <span class="text-primary"><b>Total number of returns found: {{vm.filteredReturns.length}}</b></span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <form class="form-container">
+                                <div class="form-legend"><span>Search</span></div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">Return ID</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                            <label class="form-check-label" for="exampleRadios2">Name (Last, First)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                            <label class="form-check-label" for="exampleRadios3">SSN/FEIN</label>
+                                        </div>
+                                        <input type="text" id="searchInput" />
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr class="bg-primary">
+            <th>Product</th>
+            <th>Preparer</th>
+            <th>Tax Year</th>
+            <th>Return ID</th>
+            <th>Name</th>
+            <th>Federal Status</th>
+            <th>Federal Date</th>
+            <th>State Status</th>
+            <th>State Date</th>
+            <th class="text-right">XML Schema</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="return in vm.filteredReturns">
+            <td>{{return.product}}</td>
+            <td>{{return.preparer.fullName}}</td>
+            <td>{{return.taxYear}}</td>
+            <td>{{return.id}}</td>
+            <td>{{return.taxPayer.fullName}}</td>
+            <td ng-bind-html="vm.returnStatus[return.federalStatus]"></td>
+            <td>{{return.federalDate | date:'MM/dd/yyyy'}}</td>
+            <td ng-bind-html="vm.returnStatus[return.stateStatus]"></td>
+            <td>{{return.stateDate | date:'MM/dd/yyyy'}}</td>
+            <td class="text-right">
+                <a ng-href="#" data-toggle="modal" data-target="#xmlSchema" ng-click="getXmlSchema(return.id)">View</a>
+                <a ng-href="#" ng-click="downloadXmlSchema(return.id)">Download</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="xmlSchema" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="xmlSchemaViewModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <pre ng-if="vm.xmlSchemaView">{{vm.xmlSchemaView | prettyXml}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

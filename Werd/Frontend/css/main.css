@@ -1,0 +1,73 @@
+.container > * {
+    margin: 25px auto;
+}
+
+.bg-primary {
+    color: #fff;
+}
+
+.color-primary {
+    color: #008cba !important;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: 65%;
+}
+
+.navbar-brand {
+    color: #008cba !important;
+    font-weight: bold;
+}
+
+.navbar-brand > img {
+    margin: 0 10px 5px 0;
+}
+
+.navbar-brand > a {
+    vertical-align: middle;
+}
+
+.navbar > .form-inline > span {
+    margin-right: 15px;
+}
+
+.navbar > .form-inline > span > a > i {
+    margin-right: 5px;
+}
+
+.nav-text {
+    border-color: #fff !important;
+    background-color: #fff !important;
+    border-bottom: inherit !important;
+    font-weight: bold;
+}
+
+#filterLayout {}
+
+#filterLayout .card {
+    margin: 25px auto;
+}
+
+#filterHeading {
+    cursor: pointer;
+}
+
+#filterBody .form-container {
+    border: 1px solid #008cba;
+    padding: 10px;
+}
+
+#filterBody .form-legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px !important;
+}
+
+#filterBody .form-check-label {
+    padding-left: 0 !important;
+}
+
+#filterResults {
+    margin-top: 10px;
+}
